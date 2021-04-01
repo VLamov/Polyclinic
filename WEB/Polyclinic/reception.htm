@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta content="ru" http-equiv="Content-Language" />
+		<title>П О Л И К Л И Н И К А</title>
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<link rel="stylesheet" type="text/css" href="style.css" media="all">
+		<script src="js/script.js"></script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="header">
+				<div class="headerContent">
+					<div class="left"><h1><a href="#">П О Л И К Л И Н И К А</a></h1><p>КГБУЗ «Городская поликлиника № 4096» г. Барнаул</p></div>
+					<div class="right"><img src="images/logo.jpg"></div>
+				</div>
+			</div>
+			<div class="nav">
+				<ul class="menu">
+					<li><a href="index.htm">Главная</a></li>
+					<li><a href="shedule.htm">Расписание врачей</a></li>
+					<li><a href="reception.htm">Запись на приём</a></li>
+					<li><a href="plan.htm">План этажей</a></li>
+					<li><a href="contacts.htm">Контакты</a></li>
+					<li><a href="about.htm">Об учреждении</a></li>
+				</ul>
+			</div>
+			<div class="breadcrumbs"><a href="index.htm">Главная</a>/ <a href="reception.htm">Запись на приём</a> / </div>
+			<div class="main">
+				<div class="leftCol">
+					<form>
+						<h2>Вход</h2>
+						<input type="text" placeholder="Фамилия">
+						<input type="text" placeholder="Страховой полис">
+						<button type="submit" class="minWidth">Вход</button>
+						<button type="reset" class="minWidth">Сбросить ввод</button>
+					</form>
+					<div class="row">
+						<h2>Адрес:</h2>
+						<p>КГБУЗ «Городская поликлиника № 4096» расположена в г. Барнауле по адресу: пр. Павлова, 2, 
+							отдельно стоящее здание 8 этажей. Имеется теплый гараж на 16 боксов.</p>
+							<a href="mailto:kgbuz.gp4096bar@corp.zdravalt.ru">kgbuz.gp4096bar@corp.zdravalt.ru</a>
+					</div>
+				</div>
+				<div class="rightCol">
+					<form>
+						<h1>Записаться на приём:</h1>
+						<h4><label for="specialist"><a>Специалист:</a></label></h4>
+						<select id="specialist" name="specialist">
+							<option>ВРАЧ ПО ЛЕЧЕБНОЙ ФИЗКУЛЬТУРЕ</option>
+							<option>ВРАЧ-АКУШЕР-ГИНЕКОЛОГ</option>
+							<option>ВРАЧ-ДЕРМАТОЛОГ</option>
+							<option>ВРАЧ-ИНФЕКЦИОНИСТ</option>
+							<option>ВРАЧ-КЛИНИЧЕСКИЙ ФАРМАКОЛОГ</option>
+							<option>ВРАЧ-ДИАГНОСТИК</option>
+							<option>ВРАЧ-МЕТОДИСТ</option>
+							<option>ВРАЧ-НЕВРОЛОГ</option>
+							<option>ВРАЧ-ОТОЛАРИНГОЛОГ</option>
+							<option>ВРАЧ-ОФТАЛЬМОЛОГ</option>
+							<option>ВРАЧ-РЕНТГЕНОЛОГ</option>
+							<option>ВРАЧ-ТЕРАПЕВТ</option>
+							<option>ВРАЧ-ТЕРАПЕВТ УЧАСТКОВЫЙ</option>
+							<option>ВРАЧ-ТРАВМАТОЛОГ-ОРТОПЕД</option>
+							<option>ВРАЧ-УРОЛОГ</option>
+							<option>ВРАЧ-ХИРУРГ</option>
+							<option>ВРАЧ-ЭНДОКРИНОЛОГ</option>
+							<option>ВРАЧ-ЭНДОСКОПИСТ</option>
+						</select><br>
+						<div id="grid">
+							<span>
+								<label for="date"><a>Дата приёма: </a></label><br>
+								<input type="date" id="date" name="date"/>
+							</span>
+							<span>
+								<label for="hour"><a>Час:</a></label><br>
+								<select id="hour" name="hour">
+									<option>08</option>
+									<option>09</option>
+									<option>10</option>
+									<option>11</option>
+									<option>12</option>
+									<option>13</option>
+									<option>14</option>
+									<option>15</option>
+									<option>16</option>
+									<option>17</option>
+									<option>18</option>
+									<option>19</option>
+								</select>
+							</span>
+							<span>
+								<label for="minute"><a>Минута:</a></label><br>
+								<select id="minute" name="minute">
+									<option>00</option>
+									<option>15</option>
+									<option>30</option>
+									<option>45</option>
+								</select>
+							</span>
+						</div>
+						<div class="row">
+							<h4><a>Приём</a></h4>
+							<input type="radio" value="first" name="receptio">
+							<label>Первично</label>
+							<div class="clear"></div>
+							<input type="radio" value="second" name="receptio">
+							<label>Повторно</label>
+							<div class="clear"></div>
+							<br><br><br>
+							<button type="submit" class="minWidth">Записаться</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="footer">
+				<div class="footerContent">
+					<div class="span1">
+						<h1>Режим работы</h1>
+						<div class="borderBottom"></div>
+						<ul class="clock">
+							<li>Рабочие дни:  пн-пт с 8:00 до 20:00</li>
+							<li>Выходные дни с 8:00 до 15:00</li>
+							<li>Регистратура с 7:30 до 20:00</li>
+						</ul>
+						<div class="social">
+							<div>Мы в социальных сетях…: </div>
+							<ul>
+								<li><a target="newtab" href="http://www.facebook.com/"><img src="images/facebook.png"></a></li>
+								<li><a target="newtab" href="https://twitter.com/"><img src="images/twitter.png" /></a></li>
+								<li><a target="newtab" href="https://vk.com/"><img src="images/vk.png" /></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="span1">
+						<h1>Телефоны:</h1>
+						<div class="borderBottom"></div>
+						<ul>
+							<li>Регистратура (3852) 555-7777</li>
+							<li>Женская консультация (3852) 555-9999</li>
+							<li>Дневной стационар (3852) 555-4444</li>
+							<li>Приёмная (3852) 555-6666</li>
+							<li>Горячая линия (800) 5555-8888</li>
+						</ul>
+					</div> 
+					<div class="span1">
+						<h1>При обращении</h1>
+						<div class="borderBottom"></div>
+						<p>необходимо иметь при себе:</p>
+						<ul>
+							<li>Полис ОМС</li>
+							<li>Паспорт гражданина РФ</li>
+							<li>СНИЛС</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script  type="text/javascript" >
+			$('[data-open-block').on('click', function() {
+				const activeCls = 'active';
+
+				$('[data-content]').removeClass(activeCls);
+				$(`[data-content="${$(this).data('open-block')}"`).addClass(activeCls);
+			});
+		</script>
+	</body>
+</html>
