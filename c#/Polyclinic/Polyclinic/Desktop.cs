@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Polyclinic
@@ -15,7 +8,7 @@ namespace Polyclinic
         public Desktop()
         {
             this.Userlogin = "Ламов Владимир";
-            Password A = new Password();
+            ///Password A = new Password();
             ///A.ShowDialog(this);
             InitializeComponent();
         }
@@ -48,7 +41,9 @@ namespace Polyclinic
         private void физическиеЛицаToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Individuals fl = new Individuals();
-            fl.Show(this);
+            ///fl.Owner = this;
+            fl.MdiParent = this;
+            fl.Show();
 
         }
     }

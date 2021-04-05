@@ -29,15 +29,29 @@ namespace Polyclinic
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Desktop));
+            this.menuStripMain = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.приёмToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справочникиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.физическиеЛицаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.адресаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.домаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.страныToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.границыУчастковToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.лечениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.классификаторДиагнозовToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.видыЛеченияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.методыЛеченияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.способыПриёмаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.организацииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.классификаторToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.карточкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.новыйToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.поискToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.участкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.больничныеЛистыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.расписаниеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.врачиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.новыйToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,21 +64,19 @@ namespace Polyclinic
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.праваToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.лечебноеУчреждениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.настройкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelUserName = new System.Windows.Forms.ToolStripStatusLabel();
-            this.физическиеЛицаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.адресаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.страныToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.домаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
+            this.карточкиПациентовToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStripMain.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // menuStripMain
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.файлToolStripMenuItem,
             this.приёмToolStripMenuItem,
             this.справочникиToolStripMenuItem,
@@ -72,11 +84,10 @@ namespace Polyclinic
             this.расписаниеToolStripMenuItem,
             this.справкаToolStripMenuItem,
             this.настройкиToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.menuStripMain.Location = new System.Drawing.Point(0, 0);
+            this.menuStripMain.Name = "menuStripMain";
+            this.menuStripMain.Size = new System.Drawing.Size(1184, 24);
+            this.menuStripMain.TabIndex = 0;
             // 
             // файлToolStripMenuItem
             // 
@@ -89,12 +100,14 @@ namespace Polyclinic
             // выходToolStripMenuItem
             // 
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.выходToolStripMenuItem.Text = "Выход";
             this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
             // 
             // приёмToolStripMenuItem
             // 
+            this.приёмToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.карточкиПациентовToolStripMenuItem});
             this.приёмToolStripMenuItem.Name = "приёмToolStripMenuItem";
             this.приёмToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.приёмToolStripMenuItem.Text = "Приём";
@@ -103,17 +116,103 @@ namespace Polyclinic
             // 
             this.справочникиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.физическиеЛицаToolStripMenuItem,
-            this.адресаToolStripMenuItem});
+            this.адресаToolStripMenuItem,
+            this.лечениеToolStripMenuItem,
+            this.организацииToolStripMenuItem,
+            this.классификаторToolStripMenuItem});
             this.справочникиToolStripMenuItem.Name = "справочникиToolStripMenuItem";
             this.справочникиToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
             this.справочникиToolStripMenuItem.Text = "Справочники";
+            // 
+            // физическиеЛицаToolStripMenuItem
+            // 
+            this.физическиеЛицаToolStripMenuItem.Name = "физическиеЛицаToolStripMenuItem";
+            this.физическиеЛицаToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
+            this.физическиеЛицаToolStripMenuItem.Text = "Физические лица";
+            this.физическиеЛицаToolStripMenuItem.Click += new System.EventHandler(this.физическиеЛицаToolStripMenuItem_Click);
+            // 
+            // адресаToolStripMenuItem
+            // 
+            this.адресаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.домаToolStripMenuItem,
+            this.страныToolStripMenuItem,
+            this.границыУчастковToolStripMenuItem});
+            this.адресаToolStripMenuItem.Name = "адресаToolStripMenuItem";
+            this.адресаToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
+            this.адресаToolStripMenuItem.Text = "Адреса";
+            // 
+            // домаToolStripMenuItem
+            // 
+            this.домаToolStripMenuItem.Name = "домаToolStripMenuItem";
+            this.домаToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.домаToolStripMenuItem.Text = "Улицы";
+            // 
+            // страныToolStripMenuItem
+            // 
+            this.страныToolStripMenuItem.Name = "страныToolStripMenuItem";
+            this.страныToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.страныToolStripMenuItem.Text = "Участки";
+            // 
+            // границыУчастковToolStripMenuItem
+            // 
+            this.границыУчастковToolStripMenuItem.Name = "границыУчастковToolStripMenuItem";
+            this.границыУчастковToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.границыУчастковToolStripMenuItem.Text = "Границы участков";
+            // 
+            // лечениеToolStripMenuItem
+            // 
+            this.лечениеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.классификаторДиагнозовToolStripMenuItem,
+            this.видыЛеченияToolStripMenuItem,
+            this.методыЛеченияToolStripMenuItem,
+            this.способыПриёмаToolStripMenuItem});
+            this.лечениеToolStripMenuItem.Name = "лечениеToolStripMenuItem";
+            this.лечениеToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
+            this.лечениеToolStripMenuItem.Text = "Лечение";
+            // 
+            // классификаторДиагнозовToolStripMenuItem
+            // 
+            this.классификаторДиагнозовToolStripMenuItem.Name = "классификаторДиагнозовToolStripMenuItem";
+            this.классификаторДиагнозовToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.классификаторДиагнозовToolStripMenuItem.Text = "Классификатор диагнозов";
+            // 
+            // видыЛеченияToolStripMenuItem
+            // 
+            this.видыЛеченияToolStripMenuItem.Name = "видыЛеченияToolStripMenuItem";
+            this.видыЛеченияToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.видыЛеченияToolStripMenuItem.Text = "Виды лечения";
+            // 
+            // методыЛеченияToolStripMenuItem
+            // 
+            this.методыЛеченияToolStripMenuItem.Name = "методыЛеченияToolStripMenuItem";
+            this.методыЛеченияToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.методыЛеченияToolStripMenuItem.Text = "Методы лечения";
+            // 
+            // способыПриёмаToolStripMenuItem
+            // 
+            this.способыПриёмаToolStripMenuItem.Name = "способыПриёмаToolStripMenuItem";
+            this.способыПриёмаToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.способыПриёмаToolStripMenuItem.Text = "Способы приёма";
+            // 
+            // организацииToolStripMenuItem
+            // 
+            this.организацииToolStripMenuItem.Name = "организацииToolStripMenuItem";
+            this.организацииToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
+            this.организацииToolStripMenuItem.Text = "Организации";
+            // 
+            // классификаторToolStripMenuItem
+            // 
+            this.классификаторToolStripMenuItem.Name = "классификаторToolStripMenuItem";
+            this.классификаторToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
+            this.классификаторToolStripMenuItem.Text = "Классификатор должностей";
             // 
             // карточкиToolStripMenuItem
             // 
             this.карточкиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.новыйToolStripMenuItem,
             this.поискToolStripMenuItem,
-            this.участкиToolStripMenuItem});
+            this.участкиToolStripMenuItem,
+            this.больничныеЛистыToolStripMenuItem});
             this.карточкиToolStripMenuItem.Name = "карточкиToolStripMenuItem";
             this.карточкиToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
             this.карточкиToolStripMenuItem.Text = "Пациенты";
@@ -121,20 +220,26 @@ namespace Polyclinic
             // новыйToolStripMenuItem
             // 
             this.новыйToolStripMenuItem.Name = "новыйToolStripMenuItem";
-            this.новыйToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.новыйToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.новыйToolStripMenuItem.Text = "Новый ...";
             // 
             // поискToolStripMenuItem
             // 
             this.поискToolStripMenuItem.Name = "поискToolStripMenuItem";
-            this.поискToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.поискToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.поискToolStripMenuItem.Text = "Поиск ...";
             // 
             // участкиToolStripMenuItem
             // 
             this.участкиToolStripMenuItem.Name = "участкиToolStripMenuItem";
-            this.участкиToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.участкиToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.участкиToolStripMenuItem.Text = "Участки ...";
+            // 
+            // больничныеЛистыToolStripMenuItem
+            // 
+            this.больничныеЛистыToolStripMenuItem.Name = "больничныеЛистыToolStripMenuItem";
+            this.больничныеЛистыToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.больничныеЛистыToolStripMenuItem.Text = "Больничные листы";
             // 
             // расписаниеToolStripMenuItem
             // 
@@ -159,19 +264,19 @@ namespace Polyclinic
             // новыйToolStripMenuItem1
             // 
             this.новыйToolStripMenuItem1.Name = "новыйToolStripMenuItem1";
-            this.новыйToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.новыйToolStripMenuItem1.Size = new System.Drawing.Size(151, 22);
             this.новыйToolStripMenuItem1.Text = "Список";
             // 
             // поискToolStripMenuItem1
             // 
             this.поискToolStripMenuItem1.Name = "поискToolStripMenuItem1";
-            this.поискToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.поискToolStripMenuItem1.Size = new System.Drawing.Size(151, 22);
             this.поискToolStripMenuItem1.Text = "Расписание";
             // 
             // расписаниеToolStripMenuItem1
             // 
             this.расписаниеToolStripMenuItem1.Name = "расписаниеToolStripMenuItem1";
-            this.расписаниеToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.расписаниеToolStripMenuItem1.Size = new System.Drawing.Size(151, 22);
             this.расписаниеToolStripMenuItem1.Text = "Расписание ...";
             // 
             // специальностиToolStripMenuItem
@@ -205,7 +310,8 @@ namespace Polyclinic
             // 
             this.справкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.оПрограммеToolStripMenuItem,
-            this.праваToolStripMenuItem});
+            this.праваToolStripMenuItem,
+            this.лечебноеУчреждениеToolStripMenuItem});
             this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
             this.справкаToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
             this.справкаToolStripMenuItem.Text = "Настройки";
@@ -213,14 +319,20 @@ namespace Polyclinic
             // оПрограммеToolStripMenuItem
             // 
             this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
-            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.оПрограммеToolStripMenuItem.Text = "Пользователи";
             // 
             // праваToolStripMenuItem
             // 
             this.праваToolStripMenuItem.Name = "праваToolStripMenuItem";
-            this.праваToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.праваToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.праваToolStripMenuItem.Text = "Права";
+            // 
+            // лечебноеУчреждениеToolStripMenuItem
+            // 
+            this.лечебноеУчреждениеToolStripMenuItem.Name = "лечебноеУчреждениеToolStripMenuItem";
+            this.лечебноеУчреждениеToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.лечебноеУчреждениеToolStripMenuItem.Text = "Лечебное учреждение";
             // 
             // настройкиToolStripMenuItem
             // 
@@ -240,9 +352,9 @@ namespace Polyclinic
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabelUserName});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 428);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 839);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(800, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1184, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -252,50 +364,30 @@ namespace Polyclinic
             this.toolStripStatusLabelUserName.Size = new System.Drawing.Size(59, 17);
             this.toolStripStatusLabelUserName.Text = "Работает:";
             // 
-            // физическиеЛицаToolStripMenuItem
+            // карточкиПациентовToolStripMenuItem
             // 
-            this.физическиеЛицаToolStripMenuItem.Name = "физическиеЛицаToolStripMenuItem";
-            this.физическиеЛицаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.физическиеЛицаToolStripMenuItem.Text = "Физические лица";
-            this.физическиеЛицаToolStripMenuItem.Click += new System.EventHandler(this.физическиеЛицаToolStripMenuItem_Click);
-            // 
-            // адресаToolStripMenuItem
-            // 
-            this.адресаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.страныToolStripMenuItem,
-            this.домаToolStripMenuItem});
-            this.адресаToolStripMenuItem.Name = "адресаToolStripMenuItem";
-            this.адресаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.адресаToolStripMenuItem.Text = "Адреса";
-            // 
-            // страныToolStripMenuItem
-            // 
-            this.страныToolStripMenuItem.Name = "страныToolStripMenuItem";
-            this.страныToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.страныToolStripMenuItem.Text = "Участки";
-            // 
-            // домаToolStripMenuItem
-            // 
-            this.домаToolStripMenuItem.Name = "домаToolStripMenuItem";
-            this.домаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.домаToolStripMenuItem.Text = "Улицы";
+            this.карточкиПациентовToolStripMenuItem.Name = "карточкиПациентовToolStripMenuItem";
+            this.карточкиПациентовToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.карточкиПациентовToolStripMenuItem.Text = "Карточки пациентов";
             // 
             // Desktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1184, 861);
             this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.menuStripMain);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
-            this.MainMenuStrip = this.menuStrip1;
+            this.MainMenuStrip = this.menuStripMain;
             this.Name = "Desktop";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Поликлиника";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Desktop_FormClosed);
             this.Load += new System.EventHandler(this.Desktop_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.menuStripMain.ResumeLayout(false);
+            this.menuStripMain.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -305,7 +397,7 @@ namespace Polyclinic
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip menuStripMain;
         private System.Windows.Forms.ToolStripMenuItem файлToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem справочникиToolStripMenuItem;
@@ -334,6 +426,17 @@ namespace Polyclinic
         private System.Windows.Forms.ToolStripMenuItem адресаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem страныToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem домаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem границыУчастковToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem лечениеToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem классификаторДиагнозовToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem видыЛеченияToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem методыЛеченияToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem способыПриёмаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem организацииToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem классификаторToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem больничныеЛистыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem лечебноеУчреждениеToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem карточкиПациентовToolStripMenuItem;
     }
 }
 
